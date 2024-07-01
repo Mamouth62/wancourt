@@ -21,6 +21,12 @@ class BaseController extends AbstractController
         return $this->render('base/journal.html.twig', [
         ]);
     }
+    #[Route('/wancourt/eau-ars', name: 'app_eau_ars')]
+    public function eauARS(): Response
+    {
+        return $this->render('base/eau-ars.html.twig', [
+        ]);
+    }
     #[Route('/wancourt/election-2024', name: 'app_election2024')]
     public function election2024(): Response
     {
@@ -43,6 +49,18 @@ class BaseController extends AbstractController
     public function vtt(): Response
     {
         return $this->render('base/marche.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/cycliste', name: 'app_cycliste')]
+    public function cycliste(): Response
+    {
+        return $this->render('base/cycliste.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/ducasse', name: 'app_ducasse')]
+    public function ducasse(): Response
+    {
+        return $this->render('base/ducasse.html.twig', [
         ]);
     }
     #[Route('/wancourt/mairie', name: 'app_mairie')]
@@ -80,6 +98,18 @@ class BaseController extends AbstractController
     public function arrete(): Response
     {
         return $this->render('base/arrete.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/arretes-communaux-ponctuel', name: 'app_arrete_communaux_ponctuel')]
+    public function arretePonctuel(): Response
+    {
+        return $this->render('base/arrete-ponctuel.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/arretes-communaux-permanent', name: 'app_arrete_communaux_permanent')]
+    public function arretePermanent(): Response
+    {
+        return $this->render('base/arrete-permanent.html.twig', [
         ]);
     }
     #[Route('/wancourt/mairie/feux-vegetaux-potager', name: 'app_feux_vegetaux_potager')]
@@ -182,6 +212,60 @@ class BaseController extends AbstractController
     public function ccasAidesPonctuelles(): Response
     {
         return $this->render('base/ccas-aide-ponctuelle.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas', name: 'app_ccas')]
+    public function ccas(): Response
+    {
+        return $this->render('base/ccas.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-aide-energie', name: 'app_ccas_aide_energie')]
+    public function ccasEnergie(): Response
+    {
+        return $this->render('base/ccas-energie.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-aide-subsistance', name: 'app_ccas_aide_subsistance')]
+    public function ccasSubsistance(): Response
+    {
+        return $this->render('base/ccas-subsistance.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-aide-cantine', name: 'app_ccas_aide_cantine')]
+    public function ccasCantine(): Response
+    {
+        return $this->render('base/ccas-cantine.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-bourse-etudiant', name: 'app_ccas_bourse_etudiant')]
+    public function ccasBourseEtudiant(): Response
+    {
+        return $this->render('base/ccas-bourse-etudiant.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-aide-pratique-sportive-culturelle', name: 'app_ccas_aide_sportive_culturelle')]
+    public function ccasPratiqueSportiveCulturelle(): Response
+    {
+        return $this->render('base/ccas-sportive-culturelle.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-centre-loisir-vacance-scolaire', name: 'app_ccas_centre_loisir')]
+    public function ccasCentreLoisir(): Response
+    {
+        return $this->render('base/ccas-centre-loisir.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-infos-coordonnées-utiles', name: 'app_ccas_info_utile')]
+    public function ccasInfoUtile(): Response
+    {
+        return $this->render('base/ccas-info-utile.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/ccas-mutuelle-pour-tous', name: 'app_ccas_mutuelle_pour_tous')]
+    public function ccasMutuelleTous(): Response
+    {
+        return $this->render('base/ccas-mutuelle-tous.html.twig', [
         ]);
     }
     #[Route('/wancourt/mairie/ccas-pass-jeunes', name: 'app_ccas_pass_jeunes')]
@@ -304,10 +388,10 @@ class BaseController extends AbstractController
         return $this->render('base/rpi.html.twig', [
         ]);
     }
-    #[Route('/wancourt/mairie/education-relais-assistantes-maternelles', name: 'app_assistantes_maternelles')]
+    #[Route('/wancourt/mairie/relais-petite-enfance', name: 'app_rpe')]
     public function assistantesMaternelles(): Response
     {
-        return $this->render('base/relais-assistantes-maternelles.html.twig', [
+        return $this->render('base/rpe.html.twig', [
         ]);
     }
 }
