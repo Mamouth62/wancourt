@@ -394,4 +394,22 @@ class BaseController extends AbstractController
         return $this->render('base/rpe.html.twig', [
         ]);
     }
+    #[Route('/wancourt/mairie/hier-et-jadis', name: 'app_hier_jadis')]
+    public function hierEtJadis(): Response
+    {
+        return $this->render('base/hier_jadis.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/hier', name: 'app_hier')]
+    public function hier(): Response
+    {
+        return $this->render('base/hier.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/jadis', name: 'app_jadis')]
+    public function jadis(): Response
+    {
+        return $this->render('base/jadis.html.twig', [
+        ]);
+    }
 }
