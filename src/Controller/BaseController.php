@@ -161,7 +161,7 @@ class BaseController extends AbstractController
         ]);
     }
     #[Route('/wancourt/mairie/reglement-cimetiere', name: 'app_reglement_cimetiere')]
-    public function reglemetnCimetiere(): Response
+    public function reglementCimetiere(): Response
     {
         return $this->render('base/reglement-cimetiere.html.twig', [
         ]);
@@ -206,6 +206,12 @@ class BaseController extends AbstractController
     public function armee(): Response
     {
         return $this->render('base/armee.html.twig', [
+        ]);
+    }
+    #[Route('/wancourt/mairie/info-utiles', name: 'app_info_utiles')]
+    public function infosUtiles(): Response
+    {
+        return $this->render('base/infos-utiles.html.twig', [
         ]);
     }
     #[Route('/wancourt/mairie/ccas-aides-ponctuelles', name: 'app_ccas_aides_ponctuelles')]
