@@ -280,6 +280,12 @@ class BaseController extends AbstractController
         return $this->render('base/ccas-pass-jeune.html.twig', [
         ]);
     }
+    #[Route('/wancourt/mairie/ccas-formulaire', name: 'app_ccas_formulaire')]
+    public function ccasFormulaire(): Response
+    {
+        return $this->render('base/ccas-formulaire.html.twig', [
+        ]);
+    }
     #[Route('/wancourt/mairie/urbanisme', name: 'app_urbanisme')]
     public function urbanisme(): Response
     {
@@ -418,4 +424,5 @@ class BaseController extends AbstractController
         return $this->render('base/jadis.html.twig', [
         ]);
     }
+    
 }
